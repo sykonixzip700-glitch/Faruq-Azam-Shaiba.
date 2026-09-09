@@ -1,1 +1,1325 @@
+/* =====================================================
+   ROYAL ISLAMIC WEDDING INVITATION
+   SHAIBA & FARUQ AZAM
+===================================================== */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #061b14;
+    color: #f8f1df;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   COLORS
+===================================================== */
+
+:root {
+    --green: #061b14;
+    --green2: #0b3023;
+    --gold: #d6b15d;
+    --gold-light: #f2d58b;
+    --cream: #f8f1df;
+    --dark: #04110d;
+}
+
+
+/* =====================================================
+   INTRO SCREEN
+===================================================== */
+
+.intro {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 35%,
+        rgba(214,177,93,.16),
+        transparent 28%),
+        radial-gradient(circle at 20% 80%,
+        rgba(12,74,52,.35),
+        transparent 35%),
+        linear-gradient(
+        145deg,
+        #020b08,
+        #061b14 50%,
+        #020b08
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+}
+
+.intro.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   ISLAMIC PATTERN
+===================================================== */
+
+.intro-pattern,
+.hero-pattern {
+    position: absolute;
+    inset: 0;
+
+    opacity: .12;
+
+    background-image:
+        linear-gradient(30deg, #d6b15d 12%, transparent 12.5%, transparent 87%, #d6b15d 87.5%, #d6b15d),
+        linear-gradient(150deg, #d6b15d 12%, transparent 12.5%, transparent 87%, #d6b15d 87.5%, #d6b15d),
+        linear-gradient(30deg, #d6b15d 12%, transparent 12.5%, transparent 87%, #d6b15d 87.5%, #d6b15d),
+        linear-gradient(150deg, #d6b15d 12%, transparent 12.5%, transparent 87%, #d6b15d 87.5%, #d6b15d);
+
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+.stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.stars span {
+    position: absolute;
+    color: var(--gold-light);
+    opacity: .5;
+    font-size: 14px;
+
+    animation:
+        starFloat 4s ease-in-out infinite;
+}
+
+.stars span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+.stars span:nth-child(2) {
+    left: 85%;
+    top: 15%;
+    animation-delay: 1s;
+}
+
+.stars span:nth-child(3) {
+    left: 20%;
+    top: 75%;
+    animation-delay: 2s;
+}
+
+.stars span:nth-child(4) {
+    left: 78%;
+    top: 70%;
+    animation-delay: .5s;
+}
+
+.stars span:nth-child(5) {
+    left: 50%;
+    top: 10%;
+    animation-delay: 1.5s;
+}
+
+.stars span:nth-child(6) {
+    left: 92%;
+    top: 45%;
+    animation-delay: 2.5s;
+}
+
+.stars span:nth-child(7) {
+    left: 6%;
+    top: 48%;
+    animation-delay: 3s;
+}
+
+@keyframes starFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: .35;
+    }
+
+    50% {
+        transform: translateY(-15px) scale(1.4);
+        opacity: .9;
+    }
+}
+
+
+/* =====================================================
+   CRESCENT
+===================================================== */
+
+.crescent {
+    position: absolute;
+    top: 35px;
+    right: 45px;
+
+    font-size: 45px;
+    color: var(--gold-light);
+
+    transform: rotate(-18deg);
+
+    text-shadow:
+        0 0 20px rgba(242,213,139,.4);
+}
+
+
+/* =====================================================
+   INTRO CONTENT
+===================================================== */
+
+.intro-content {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 500px;
+
+    text-align: center;
+
+    padding: 25px;
+
+    animation: introAppear 1.5s ease both;
+}
+
+@keyframes introAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.arabic-title {
+    font-family: "Amiri", serif;
+    font-size: 27px;
+    color: var(--gold-light);
+    margin-bottom: 8px;
+}
+
+.arabic-subtitle {
+    font-family: "Amiri", serif;
+    font-size: 16px;
+    opacity: .65;
+    line-height: 1.8;
+}
+
+.invite-small {
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--gold-light);
+    margin: 20px 0;
+}
+
+
+/* =====================================================
+   ORNAMENT
+===================================================== */
+
+.gold-ornament {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.gold-ornament span {
+    color: var(--gold-light);
+    font-size: 15px;
+}
+
+.gold-ornament i {
+    display: block;
+    width: 45px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+    );
+}
+
+
+/* =====================================================
+   ENVELOPE AREA
+===================================================== */
+
+.envelope-area {
+    position: relative;
+
+    width: 350px;
+    height: 270px;
+
+    margin: 25px auto 5px;
+
+    perspective: 1200px;
+}
+
+
+/* =====================================================
+   ENVELOPE
+===================================================== */
+
+.envelope {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 330px;
+    height: 210px;
+
+    transform:
+        translateX(-50%)
+        rotateX(0deg);
+
+    transform-style: preserve-3d;
+
+    cursor: pointer;
+
+    filter:
+        drop-shadow(
+        0 25px 25px
+        rgba(0,0,0,.45)
+        );
+
+    transition:
+        transform .5s ease;
+}
+
+.envelope:hover {
+    transform:
+        translateX(-50%)
+        translateY(-5px);
+}
+
+
+/* =====================================================
+   ENVELOPE BACK
+===================================================== */
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+        145deg,
+        #174b37,
+        #08291e
+        );
+
+    border:
+        1px solid
+        rgba(214,177,93,.65);
+
+    border-radius: 5px;
+
+    box-shadow:
+        inset 0 0 0 4px rgba(214,177,93,.08),
+        0 0 30px rgba(214,177,93,.08);
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   CARD INSIDE
+===================================================== */
+
+.envelope-inside {
+    position: absolute;
+
+    left: 50%;
+    bottom: 12px;
+
+    width: 275px;
+    height: 190px;
+
+    transform:
+        translateX(-50%)
+        translateY(15px)
+        scale(.92);
+
+    opacity: 0;
+
+    transition:
+        transform 1.5s cubic-bezier(.2,.8,.2,1),
+        opacity .8s ease;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+
+    padding: 10px;
+
+    background:
+        linear-gradient(
+        135deg,
+        #fffaf0,
+        #eee1c3
+        );
+
+    color: #173226;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.4);
+}
+
+.card-border {
+    height: 100%;
+
+    border: 1px solid #b79243;
+
+    text-align: center;
+
+    padding: 12px 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-arabic {
+    font-family: "Amiri", serif;
+    font-size: 18px;
+    color: #9a742c;
+}
+
+.card-label {
+    font-size: 6px;
+    letter-spacing: 2px;
+    margin: 4px 0;
+    color: #80632c;
+}
+
+.card h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    line-height: .8;
+    font-weight: 600;
+}
+
+.card-and {
+    font-family: "Cormorant Garamond", serif;
+    color: #a77c27;
+    font-size: 20px;
+    margin: 2px 0;
+}
+
+.card h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.card-line {
+    width: 65px;
+    height: 1px;
+    background: #b79243;
+    margin: 5px;
+}
+
+.guest-label {
+    font-size: 5px;
+    letter-spacing: 1px;
+    color: #80632c;
+}
+
+.guest {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 10px;
+    margin: 2px;
+}
+
+.card-date,
+.card-time,
+.card-venue {
+    font-size: 6px;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+.card-time {
+    color: #987226;
+}
+
+
+/* =====================================================
+   ENVELOPE FRONT
+===================================================== */
+
+.envelope-front-left,
+.envelope-front-right,
+.envelope-bottom {
+
+    position: absolute;
+
+    bottom: 0;
+
+    background:
+        linear-gradient(
+        145deg,
+        #0e3b2b,
+        #072219
+        );
+
+    border-color:
+        rgba(214,177,93,.45);
+
+    z-index: 4;
+}
+
+.envelope-front-left {
+    left: 0;
+
+    width: 52%;
+    height: 100%;
+
+    clip-path:
+        polygon(
+        0 0,
+        100% 50%,
+        0 100%
+        );
+}
+
+.envelope-front-right {
+    right: 0;
+
+    width: 52%;
+    height: 100%;
+
+    clip-path:
+        polygon(
+        100% 0,
+        0 50%,
+        100% 100%
+        );
+}
+
+.envelope-bottom {
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    clip-path:
+        polygon(
+        0 100%,
+        50% 42%,
+        100% 100%
+        );
+}
+
+
+/* =====================================================
+   FLAP
+===================================================== */
+
+.envelope-flap {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 58%;
+
+    transform-origin: top center;
+
+    transform:
+        rotateX(0deg);
+
+    transform-style: preserve-3d;
+
+    background:
+        linear-gradient(
+        145deg,
+        #174b37,
+        #0a2b20
+        );
+
+    clip-path:
+        polygon(
+        0 0,
+        100% 0,
+        50% 100%
+        );
+
+    z-index: 7;
+
+    transition:
+        transform 1.25s
+        cubic-bezier(.65,-.2,.25,1);
+}
+
+.flap-pattern {
+    position: absolute;
+    inset: 0;
+
+    opacity: .25;
+
+    background-image:
+        radial-gradient(
+        circle,
+        #d6b15d 1px,
+        transparent 1px
+        );
+
+    background-size: 18px 18px;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+
+/* =====================================================
+   WAX SEAL
+===================================================== */
+
+.wax-seal {
+
+    position: absolute;
+
+    left: 50%;
+    top: 49%;
+
+    transform:
+        translate(-50%,-50%);
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+        circle at 35% 30%,
+        #f5d98c,
+        #b9882e 55%,
+        #805d1d
+        );
+
+    border: 3px solid #f2d58b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2px;
+
+    color: #fff8df;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.45),
+        0 0 25px rgba(214,177,93,.3);
+
+    z-index: 10;
+
+    transition:
+        transform .8s ease,
+        opacity .5s ease;
+}
+
+.wax-seal b {
+    font-size: 10px;
+}
+
+.envelope.open .wax-seal {
+    transform:
+        translate(-50%,-50%)
+        scale(1.6)
+        rotate(20deg);
+
+    opacity: 0;
+}
+
+
+/* =====================================================
+   OPEN CARD
+===================================================== */
+
+.envelope.open .envelope-inside {
+
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        translateY(-145px)
+        scale(1.08);
+
+    z-index: 9;
+}
+
+.envelope-shadow {
+    position: absolute;
+
+    left: 50%;
+    bottom: -15px;
+
+    width: 280px;
+    height: 25px;
+
+    transform: translateX(-50%);
+
+    background: rgba(0,0,0,.35);
+
+    filter: blur(15px);
+
+    border-radius: 50%;
+}
+
+
+/* =====================================================
+   TAP TEXT
+===================================================== */
+
+.tap-text {
+    margin-top: 10px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: var(--gold-light);
+
+    animation:
+        tapPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes tapPulse {
+
+    0%,
+    100% {
+        opacity: .45;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-4px);
+    }
+}
+
+
+/* =====================================================
+   MAIN WEBSITE
+===================================================== */
+
+.website {
+    display: none;
+
+    opacity: 0;
+
+    background:
+        linear-gradient(
+        180deg,
+        #061b14,
+        #08291e 40%,
+        #04130e
+        );
+}
+
+.website.show {
+    display: block;
+
+    animation:
+        websiteReveal 1.5s ease forwards;
+}
+
+@keyframes websiteReveal {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    padding: 70px 20px;
+}
+
+.hero-pattern {
+    opacity: .08;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+}
+
+.hero .arabic {
+    font-family: "Amiri", serif;
+
+    font-size: 28px;
+
+    color: var(--gold-light);
+
+    margin-bottom: 8px;
+}
+
+.welcome {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    opacity: .7;
+
+    line-height: 1.8;
+}
+
+.ornament {
+    color: var(--gold);
+
+    margin: 20px 0;
+
+    letter-spacing: 5px;
+}
+
+.invitation-label {
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: var(--gold-light);
+}
+
+.nikah-title {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 16px;
+
+    letter-spacing: 8px;
+
+    margin-top: 15px;
+
+    color: var(--gold);
+}
+
+.hero h1 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(60px, 15vw, 110px);
+
+    line-height: .75;
+
+    font-weight: 500;
+
+    margin-top: 25px;
+
+    color: var(--cream);
+
+    text-shadow:
+        0 5px 25px rgba(0,0,0,.3);
+}
+
+.ampersand {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color: var(--gold);
+
+    font-size: 45px;
+
+    margin: 15px 0;
+}
+
+.hero h2 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(45px, 11vw, 80px);
+
+    font-weight: 500;
+
+    line-height: .8;
+}
+
+.hero-message {
+    max-width: 450px;
+
+    margin: 30px auto;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    opacity: .75;
+}
+
+
+/* =====================================================
+   DATE CARD
+===================================================== */
+
+.date-card {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: min(450px, 95%);
+
+    margin: 30px auto;
+
+    padding: 20px 10px;
+
+    border-top: 1px solid
+        rgba(214,177,93,.5);
+
+    border-bottom: 1px solid
+        rgba(214,177,93,.5);
+
+    background:
+        rgba(255,255,255,.025);
+
+    backdrop-filter: blur(10px);
+}
+
+.date-card > div {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.date-card span {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+    color: var(--gold-light);
+}
+
+.date-card small {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    opacity: .65;
+}
+
+.date-middle {
+    border-left: 1px solid
+        rgba(214,177,93,.3);
+
+    border-right: 1px solid
+        rgba(214,177,93,.3);
+}
+
+.date-middle strong {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+}
+
+.direct-nikah {
+    color: var(--gold-light);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin: 20px;
+}
+
+.hero button {
+    border: 1px solid var(--gold);
+
+    background:
+        linear-gradient(
+        135deg,
+        rgba(214,177,93,.2),
+        rgba(214,177,93,.05)
+        );
+
+    color: var(--gold-light);
+
+    padding: 14px 28px;
+
+    border-radius: 2px;
+
+    letter-spacing: 3px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition:
+        .4s ease;
+}
+
+.hero button:hover {
+    background: var(--gold);
+
+    color: var(--dark);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(214,177,93,.2);
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section:not(.hero) {
+    position: relative;
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+section:not(.hero)::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: var(--gold);
+
+    opacity: .35;
+
+    font-size: 13px;
+}
+
+section h2 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(42px, 9vw, 65px);
+
+    font-weight: 500;
+
+    margin: 10px 0;
+
+    color: var(--cream);
+}
+
+.section-label {
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+}
+
+.gold-line {
+    width: 70px;
+    height: 1px;
+
+    margin: 20px auto;
+
+    background:
+        linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+        );
+}
+
+
+/* =====================================================
+   INVITATION
+===================================================== */
+
+#invitation {
+    background:
+        radial-gradient(
+        circle at center,
+        rgba(214,177,93,.06),
+        transparent 45%
+        );
+}
+
+.message {
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    line-height: 2;
+
+    font-size: 14px;
+
+    opacity: .75;
+}
+
+.names {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    margin: 35px 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 42px;
+
+    color: var(--gold-light);
+}
+
+.names b {
+    font-size: 25px;
+
+    color: var(--gold);
+}
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown-section {
+    background:
+        #04150f;
+}
+
+.countdown {
+    max-width: 650px;
+
+    margin: 40px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+.time-box {
+    padding: 25px 8px;
+
+    border:
+        1px solid
+        rgba(214,177,93,.3);
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+.time-box span {
+    display: block;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 42px;
+
+    color: var(--gold-light);
+}
+
+.time-box small {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    opacity: .55;
+}
+
+
+/* =====================================================
+   DETAIL CARD
+===================================================== */
+
+.detail-card {
+    max-width: 500px;
+
+    margin: 40px auto 0;
+
+    padding: 50px 25px;
+
+    border:
+        1px solid
+        rgba(214,177,93,.35);
+
+    background:
+        linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.015)
+        );
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.25);
+}
+
+.detail-symbol {
+    font-size: 35px;
+
+    color: var(--gold);
+
+    margin-bottom: 15px;
+}
+
+.detail-card h3 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    margin: 15px;
+}
+
+.detail-card p {
+    font-size: 12px;
+
+    line-height: 2;
+
+    opacity: .7;
+}
+
+.big-date {
+    color: var(--gold-light);
+
+    font-size: 15px !important;
+}
+
+
+/* =====================================================
+   FAMILY
+===================================================== */
+
+.family-wrapper {
+    max-width: 850px;
+
+    margin: 45px auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.family-card {
+    flex: 1;
+
+    padding: 40px 25px;
+
+    border:
+        1px solid
+        rgba(214,177,93,.25);
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+.family-card p {
+    color: var(--gold);
+
+    font-size: 8px;
+
+    letter-spaci
