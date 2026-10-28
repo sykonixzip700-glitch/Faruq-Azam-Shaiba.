@@ -1,4 +1,41 @@
 document.addEventListener("DOMContentLoaded", function () {
+// Personalized wedding invitations
+const guests = {
+    sanjana: {
+        name: "Sanjana",
+        message: "You are cordially invited to join us on the wedding day."
+    },
+
+    aarti: {
+        name: "Aarti",
+        message: "You are cordially invited to join us on the wedding day."
+    },
+
+    aashish: {
+        name: "Aashish",
+        message: "You are cordially invited to join us on the wedding day."
+    },
+
+    rukmani: {
+        name: "Rukmani",
+        message: "You are warmly invited to join us one day before the wedding."
+    }
+};
+
+const params = new URLSearchParams(window.location.search);
+const guestId = (params.get("name") || "").trim().toLowerCase();
+const guest = guests[guestId];
+
+const guestNameElement = document.getElementById("guestName");
+const guestMessageElement = document.getElementById("guestMessage");
+
+if (guest && guestNameElement && guestMessageElement) {
+    guestNameElement.textContent = guest.name;
+    guestMessageElement.textContent = guest.message;
+} else if (guestNameElement && guestMessageElement) {
+    guestNameElement.textContent = "A Special Guest";
+    guestMessageElement.textContent = "";
+}
 
     /* =====================================================
        ROYAL ENVELOPE OPENING
