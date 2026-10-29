@@ -10,6 +10,10 @@ const guests = {
         name: "Aarti",
         message: "You are cordially invited to join us on the wedding day."
     },
+    Aasish: {
+        name: "Aasish",
+        message: "You are cordially invited to join us on the wedding day."
+    },
 
     aashish: {
         name: "Aashish",
