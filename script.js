@@ -15,10 +15,10 @@ const guests = {
         message: "You are cordially invited to join us on the wedding day."
     },
 
-    abhishak: {
-        name: "Abhishak",
-        message: "You are cordially invited to join us on the wedding day."
-    },
+    abhishek: {
+    name: "Abhishek",
+    message: "You are cordially invited to join us on the wedding day."
+},
 
     rukmani: {
         name: "Rukmani",
